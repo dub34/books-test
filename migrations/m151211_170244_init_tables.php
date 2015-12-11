@@ -45,6 +45,7 @@ class m151211_170244_init_tables extends Migration
 			'date',
 			'date_create',
 			'date_update',
+			'preview'
 		], [
 			[
 				'Стальная крыса',
@@ -52,6 +53,7 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1961-01-01 00:00:00'),
 				time(),
 				time(),
+				'book_1.jpg'
 			],
 			[
 				'Неукротимая планета',
@@ -59,6 +61,7 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1960-04-01 00:00:00'),
 				time(),
 				time(),
+				'book_2.jpg'
 			],
 			[
 				'Конные варвары',
@@ -66,6 +69,7 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1968-06-03 00:00:00'),
 				time(),
 				time(),
+				null
 			],
 			[
 				'Властелин колец. Братство Кольца',
@@ -73,12 +77,14 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1954-07-29 00:00:00'),
 				time(),
 				time(),
+				null
 			],[
 				'Властелин колец. Две крепости',
 				2,
 				\Yii::$app->formatter->asTimestamp('1954-11-11 00:00:00'),
 				time(),
 				time(),
+				null
 			],
 			[
 				'Властелин колец. Возвращение короля',
@@ -86,6 +92,7 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1954-10-20 00:00:00'),
 				time(),
 				time(),
+				null
 			],
 			[
 				'Девять принцев Амбера',
@@ -93,6 +100,7 @@ class m151211_170244_init_tables extends Migration
 				\Yii::$app->formatter->asTimestamp('1970-05-21 00:00:00'),
 				time(),
 				time(),
+				null
 			],
 		]);
 	}
