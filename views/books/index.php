@@ -7,6 +7,8 @@
  * @var \yii\data\ActiveDataProvider $dataProvider
  * @var \app\models\BookSearch $model
  */
+\app\assets\LightBoxAsset::register($this);
+
 use yii\helpers\ArrayHelper;
 use \yii\bootstrap\Html;
 
@@ -55,11 +57,20 @@ use \yii\bootstrap\Html;
 		[
 			'attribute' => 'preview',
 			'value' => function (\app\models\Book $model) {
-				return !empty($model->preview) ? Html::img($model->getPreviewUrl(), [
-					'width' => 50
-				]) : null;
+				$link = null;
+				if (!empty($model->preview)) {
+					$img = Html::img($model->getPreviewUrl(), [
+						'width' => 50,
+
+					]);
+
+					$link = Html::a($img, $model->getPreviewUrl(), [
+						'data-lightbox' => "image-" . $model->id
+					]);
+				}
+				return $link;
 			},
-			'format' => 'html'
+			'format' => 'raw'
 		],
 		[
 			'attribute' => 'author_id',
