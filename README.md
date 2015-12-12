@@ -10,3 +10,5 @@ book test
 
 pass admin
 login admin
+
+Забыл добавить datepicker'ы к полям с датами :( 
