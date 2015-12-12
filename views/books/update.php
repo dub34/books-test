@@ -39,7 +39,12 @@
 	<div class="row">
 
 		<div class="col-md-6">
-			<?= $form->field($model, 'date'); ?>
+			<?= $form->field($model, 'date')->widget(\dosamigos\datepicker\DatePicker::className(),[
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'dd.mm.yyyy'
+				]
+			]); ?>
 		</div>
 	</div>
 	<div class="row">

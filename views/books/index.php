@@ -38,10 +38,20 @@ use \yii\bootstrap\Html;
 	</div>
 	<div class="row">
 		<div class="col-md-2">
-			<?= $form->field($model, 'dateFrom'); ?>
+			<?= $form->field($model, 'dateFrom')->widget(\dosamigos\datepicker\DatePicker::className(),[
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'dd.mm.yyyy'
+				]
+			]); ?>
 		</div>
 		<div class="col-md-2">
-			<?= $form->field($model, 'dateTo'); ?>
+			<?= $form->field($model, 'dateTo')->widget(\dosamigos\datepicker\DatePicker::className(),[
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'dd.mm.yyyy'
+				]
+			]); ?>
 		</div>
 		<div class="col-md-2">
 			<br>
