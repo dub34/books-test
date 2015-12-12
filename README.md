@@ -1,10 +1,14 @@
 book test
 ============================
-need to config db connection
+1.config db connection
 
-install composer
+2.install composer
 
-run ./yii migrate
+3.run ./yii migrate
+
+4.directory web/uploads need to be writable.
 
 pass admin
 login admin
+
+Забыл добавить datepicker'ы к полям с датами :( 
